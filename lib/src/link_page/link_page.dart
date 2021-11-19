@@ -26,9 +26,40 @@ class LinkPage extends StatelessWidget {
           _body(context),
           Positioned(
               top: MediaQuery.of(context).size.height * 0.07,
-              right: 10,
-              left: 10,
-              child: _avatar()),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  _avatar(),
+                  Container(
+                    padding: EdgeInsets.only(top: 40),
+                    alignment: Alignment.center,
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.remove_red_eye_outlined,
+                          color: Colors.grey[800],
+                          size: 20,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Container(
+                          child: Text(
+                            '${theMockUser.views ?? 0}',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 16,
+                              color: Colors.grey[800],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              left: 30,
+              right: 30),
         ],
       ),
     );
@@ -37,9 +68,11 @@ class LinkPage extends StatelessWidget {
   Widget _avatar() {
     return Container(
       height: 150,
+      width: 150,
       decoration: BoxDecoration(
-        shape: BoxShape.circle,
+        shape: BoxShape.rectangle,
         color: Colors.blue[800],
+        borderRadius: BorderRadius.circular(50),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),

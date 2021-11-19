@@ -21,6 +21,7 @@ User theMockUser = User(
     instagram: 'dasf',
     github: 'fasdf',
     address: 'dsafsd',
+    views: '2000',
     color: 'F58331',
     mapLocation: 'latlong',
     createdAt: DateTime.now(),

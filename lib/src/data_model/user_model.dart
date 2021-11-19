@@ -21,8 +21,12 @@ class User {
       this.instagram,
       this.youTube,
       this.github,
+      this.androidAppLink,
       this.color,
-      this.categories});
+      this.categories,
+      this.deepLink,
+      this.iosAppLink,
+      this.views});
 
   String? color;
   String? id;
@@ -43,8 +47,9 @@ class User {
   String? address;
   String? iosAppLink;
   String? androidAppLink;
-  String? deepLink;
   String? mapLocation;
+  String? deepLink;
+  String? views;
   DateTime? createdAt;
   DateTime? updatedAt;
   List<dynamic>? categories;
@@ -73,6 +78,7 @@ class User {
         androidAppLink = map['androidAppLink'],
         deepLink = map['deepLink'],
         color = map['color'],
+        views = map['views'],
         categories = map['categories'];
 
   // User.fromSnapshot(DocumentSnapshot snapshot) {
@@ -102,5 +108,6 @@ class User {
         categories = user.categories,
         iosAppLink = user.iosAppLink,
         androidAppLink = user.androidAppLink,
+        views = user.views,
         deepLink = user.deepLink;
 }
