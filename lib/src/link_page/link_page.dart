@@ -5,8 +5,21 @@ class LinkPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('LinkPage'),
+    return Scaffold(
+      body: Stack(
+        children: [
+          Container(
+            // height: 500,
+            color: Colors.blue[200],
+          ),
+          Container(
+            child: Text(
+              'LinkPage',
+              style: TextStyle(fontSize: 24),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
