@@ -6,7 +6,7 @@ const String userName = '@johndoe';
 
 User theMockUser = User(
     id: '1',
-    name: 'wshyar',
+    name: 'Lura mohammed',
     header: header,
     theme: 'dark',
     email: 'hooseyr@gmail.com',
@@ -21,6 +21,7 @@ User theMockUser = User(
     instagram: 'dasf',
     github: 'fasdf',
     address: 'dsafsd',
+    color: 'F58331',
     mapLocation: 'latlong',
     createdAt: DateTime.now(),
     updatedAt: DateTime.now());

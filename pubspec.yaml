@@ -14,12 +14,13 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  google_fonts: ^2.1.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
 
   flutter_lints: ^1.0.0
+  flutter_test:
+    sdk: flutter
 
 flutter:
   uses-material-design: true

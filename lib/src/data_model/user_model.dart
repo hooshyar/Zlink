@@ -1,26 +1,30 @@
-class User {
-  User({
-    this.id,
-    this.name,
-    this.email,
-    this.avatar,
-    this.address,
-    this.phoneNumber,
-    this.theme,
-    this.createdAt,
-    this.updatedAt,
-    this.facebook,
-    this.header,
-    this.info,
-    this.linkedIn,
-    this.mapLocation,
-    this.twitter,
-    this.website,
-    this.instagram,
-    this.youTube,
-    this.github,
-  });
+import 'package:flutter/material.dart';
 
+class User {
+  User(
+      {this.id,
+      this.name,
+      this.email,
+      this.avatar,
+      this.address,
+      this.phoneNumber,
+      this.theme,
+      this.createdAt,
+      this.updatedAt,
+      this.facebook,
+      this.header,
+      this.info,
+      this.linkedIn,
+      this.mapLocation,
+      this.twitter,
+      this.website,
+      this.instagram,
+      this.youTube,
+      this.github,
+      this.color,
+      this.categories});
+
+  String? color;
   String? id;
   String? name;
   String? header;
@@ -68,6 +72,7 @@ class User {
         iosAppLink = map['iosAppLink'],
         androidAppLink = map['androidAppLink'],
         deepLink = map['deepLink'],
+        color = map['color'],
         categories = map['categories'];
 
   // User.fromSnapshot(DocumentSnapshot snapshot) {
