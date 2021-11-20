@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:randevu/src/mock_data/mock_user_data.dart';
+import 'package:randevu/src/widgets/button_widgets/button_elevated_style1.dart';
+import 'package:randevu/src/widgets/button_widgets/button_outlined_t1.dart';
 
 class LinkPage extends StatelessWidget {
   LinkPage({Key? key}) : super(key: key);
@@ -144,31 +147,76 @@ class LinkPage extends StatelessWidget {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Column(
-                children: [
-                  SizedBox(height: 90),
-                  Text(
-                    theMockUser.name?.toUpperCase() ??
-                        'the User Name'.toUpperCase(),
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontFamily: GoogleFonts.aBeeZee().fontFamily,
-                    ),
+              child: Column(children: [
+                SizedBox(height: 90),
+                Text(
+                  theMockUser.name?.toUpperCase() ??
+                      'the User Name'.toUpperCase(),
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontFamily: GoogleFonts.aBeeZee().fontFamily,
                   ),
-                  const Text(
-                    'LinkPage',
-                    style: TextStyle(fontSize: 24),
-                  ),
-                  const Text(
-                    'LinkPage',
-                    style: TextStyle(fontSize: 24),
-                  ),
-                  const Text(
-                    'LinkPage',
-                    style: TextStyle(fontSize: 24),
-                  ),
-                ],
-              ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                OutlinedButtonStyle1(
+                  text: 'Website',
+                  borderColor: Colors.red[800],
+                  textColor: Colors.grey[800],
+                  onPressed: () {
+                    print('Website');
+                  },
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                OutlinedButtonStyle1(
+                  text: 'Website',
+                  borderWidth: 2,
+                  borderColor: Colors.blue[800],
+                  textColor: Colors.blue[800],
+                  onPressed: () {
+                    print('Website');
+                  },
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                OutlinedButtonStyle1(
+                  text: 'Website',
+                  borderWidth: 2,
+                  borderColor: Colors.blue[800],
+                  textColor: Colors.red,
+                  onPressed: () {
+                    print('Website');
+                  },
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                ButtonElevatedStyle1(
+                  text: 'Instagram',
+                  icon: FontAwesomeIcons.instagram,
+                  bgColor: Colors.red[800],
+                  textColor: Colors.white,
+                  onPressed: () {
+                    print('Instagram');
+                  },
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                ButtonElevatedStyle1(
+                  text: 'Facebook',
+                  icon: FontAwesomeIcons.facebook,
+                  bgColor: Colors.blue[800],
+                  textColor: Colors.white,
+                  onPressed: () {
+                    print('Facebook');
+                  },
+                ),
+              ]),
             ),
           ],
         ),
