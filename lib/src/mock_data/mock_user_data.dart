@@ -11,7 +11,8 @@ User theMockUser = User(
     theme: 'dark',
     email: 'hooseyr@gmail.com',
     avatar: avatarUrl,
-    info: 'fads k asdkfjklsdjfsd kjfsjdf ksafdj ks jfdks',
+    info:
+        'Magna consequat laborum eiusmod cupidatat qui aliquip nulla Lorem deserunt aliquip sint. Amet exercitation fugiat deserunt do consequat quis amet amet pariatur incididunt. Tempor reprehenderit ea ipsum fugiat dolore duis minim mollit duis occaecat ut eiusmod eu aliquip. Esse et ipsum excepteur officia tempor sint nostrud in adipisicing. Labore occaecat magna culpa irure sint reprehenderit consectetur anim dolore ut ipsum minim. Aliqua dolor Lorem incididunt est occaecat.',
     website: 'https://www.datacode.app',
     phoneNumber: '+9647517491408',
     facebook: 'facebook',
@@ -23,6 +24,7 @@ User theMockUser = User(
     address: 'dsafsd',
     views: '2000',
     color: 'F58331',
+    fans: 3232,
     mapLocation: 'latlong',
     createdAt: DateTime.now(),
     updatedAt: DateTime.now());

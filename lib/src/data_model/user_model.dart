@@ -26,6 +26,7 @@ class User {
       this.categories,
       this.deepLink,
       this.iosAppLink,
+      this.fans,
       this.views});
 
   String? color;
@@ -50,6 +51,7 @@ class User {
   String? mapLocation;
   String? deepLink;
   String? views;
+  int? fans;
   DateTime? createdAt;
   DateTime? updatedAt;
   List<dynamic>? categories;
@@ -79,6 +81,7 @@ class User {
         deepLink = map['deepLink'],
         color = map['color'],
         views = map['views'],
+        fans = map['fans'],
         categories = map['categories'];
 
   // User.fromSnapshot(DocumentSnapshot snapshot) {
@@ -109,5 +112,6 @@ class User {
         iosAppLink = user.iosAppLink,
         androidAppLink = user.androidAppLink,
         views = user.views,
+        fans = user.fans,
         deepLink = user.deepLink;
 }
