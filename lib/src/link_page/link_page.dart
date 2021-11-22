@@ -232,6 +232,7 @@ class _LinkPageState extends State<LinkPage> {
                   SizedBox(height: 90),
                   SelectableText(
                     theMockUser.name ?? 'the User Name',
+                    minLines: 2,
                     style: TextStyle(
                       fontSize: 22,
                       fontFamily: GoogleFonts.aBeeZee().fontFamily,

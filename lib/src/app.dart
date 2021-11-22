@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
                   case LinkPage.routeName:
                     return LinkPage();
                   default:
-                    return UserRegistrationPage();
+                    return const LoginPage();
                 }
               },
             );

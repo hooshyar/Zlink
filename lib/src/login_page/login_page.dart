@@ -6,6 +6,7 @@ import 'package:lottie/lottie.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:randevu/src/global_widgets/logo_widget.dart';
 import 'package:randevu/src/style.dart';
+import 'package:randevu/src/user_registration_page/user_registration_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -135,6 +136,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               child: const Text('Login'),
               onPressed: () async {
+                if (_phoneController.text.isEmpty) {
+                  return;
+                }
                 await _auth.verifyPhoneNumber(
                   phoneNumber: '+964' +
                       _phoneController
@@ -221,8 +225,10 @@ class _LoginPageState extends State<LoginPage> {
                     await _auth.signInWithCredential(_phoneAuthCredential);
                 debugPrint(_user.user!.phoneNumber.toString());
                 if (_user.user != null) {
-                  // Navigator.of(context)
-                  //     .pushReplacementNamed(HomePage.routeName);
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => UserRegistrationPage(
+                            user: _user.user,
+                          )));
                 }
                 // Navigator.of(context).pushReplacementNamed(HomePage.routeName);
               }),
